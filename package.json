@@ -1,0 +1,33 @@
+{
+  "name": "github-profile-search",
+  "version": "1.0.0",
+  "description": "Practice with react and redux",
+  "main": "webpack.config.json",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roneilPMH/Github-Search.git"
+  },
+  "author": "Minghao Pu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roneilPMH/Github-Search/issues"
+  },
+  "homepage": "https://github.com/roneilPMH/Github-Search#readme",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "material-ui": "^0.18.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "react-router": "^4.1.1",
+    "react-tap-event-plugin": "^2.0.1",
+    "redux": "^3.6.0",
+    "redux-actions": "^2.0.3",
+    "redux-immutable": "^4.0.0",
+    "redux-thunk": "^2.2.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
