@@ -12,7 +12,7 @@ import {
   hideSpinner
 } from './uiActions';
 
-export const getGihub = (userId = 'roneilPMH') => {
+export const getGithub = (userId = 'roneilPMH') => {
   return (dispatch) => {
     dispatch({ type: GET_GITHUB_INITIATE});
     dispatch(showSpinner());
