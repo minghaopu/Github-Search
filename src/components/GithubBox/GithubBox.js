@@ -1,26 +1,40 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import { Card, CardActions, CardHeader, CardText } from 'material-ui/Card';
 import RaisedButton from 'material-ui/RaisedButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
 
-const GithubBox = (props) => (
+const GithubBox = props => (
   <div>
     <Card>
-      <CardHeader title={props.data.get('name')} subtitle={props.userId} avatar={props.data.get('avatar_url')} />
+      <CardHeader
+        title={props.data.get('name')}
+        subtitle={props.userId}
+        avatar={props.data.get('avatar_url')}
+      />
       <CardText>
-        Following: {props.data.get('follewers')}
+        Followers : {props.data.get('followers')}
       </CardText>
       <CardText>
-        Following: {props.data.get('Following')}
+        Following: {props.data.get('following')}
       </CardText>
-      <CardAction>
+      <CardActions>
         <Link to="/">
-          <RaisedButton label="Back" icon={<ActionHome />} secondary={true} />
+          <RaisedButton
+            label="Back"
+            icon={<ActionHome />}
+            secondary
+          />
         </Link>
-      </CardAction>
+      </CardActions>
     </Card>
   </div>
 );
+
+GithubBox.propTypes = {
+  data: PropTypes.Object,
+  userId: PropTypes.string,
+};
 
 export default GithubBox;

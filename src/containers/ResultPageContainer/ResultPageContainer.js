@@ -1,9 +1,8 @@
 import { connect } from 'react-redux';
-import ResultPageComponent from '../../components/ResultPageComponent';
+import ResultPage from '../../components/ResultPage';
 
 export default connect(
-  (state) => ({
-    data: state.getIn(['github', 'data'])
-  }),
-  (dispatch) => ({})
-)(ResultPageComponent);
+  state => ({
+    data: state.getIn(['github', 'data']),
+  })
+)(ResultPage);

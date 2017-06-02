@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import HomepageComponent from '../../components/HomePageComponent';
+import HomePage from '../../components/HomePage';
 
 import {
   getGithub,
@@ -7,14 +7,14 @@ import {
 } from '../../actions';
 
 export default connect(
-  (state) => ({
+  state => ({
     userId: state.getIn(['github', 'userId']),
   }),
-  (dispatch) => ({
-    onChangeUserId: (event) => (
+  dispatch => ({
+    onChangeUserId: event => (
       dispatch(changeUserId(event.target.value))
     ),
-    onSubmitUserId: (userId) => (
+    onSubmitUserId: userId => () => (
       dispatch(getGithub(userId))
     ),
   }),
@@ -25,4 +25,4 @@ export default connect(
       onSubmitUserId: onSubmitUserId(userId),
     });
   }
-)(HomepageComponent);
+)(HomePage);
